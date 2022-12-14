@@ -1,13 +1,11 @@
 import { ISubNav } from '../SubNav/SubNav';
+// import { useMoralis } from "react-moralis";
+// const { isAuthenticated } = useMoralis();
 
 const NAV_LINKS: ISubNav[] = [
   { label: 'Home', href: '/' },
   {
-    label: 'Transactions',
-    href: '/transactions',
-  },
-  {
-    label: 'Transfers',
+    label: 'DEX',
     href: '/transfers',
     children: [
       {
@@ -25,7 +23,11 @@ const NAV_LINKS: ISubNav[] = [
     ],
   },
   {
-    label: 'Balances',
+    label: 'Account',
+    href: '/account',
+  },
+  {
+    label: 'Admin',
     href: '/balances',
     children: [
       {

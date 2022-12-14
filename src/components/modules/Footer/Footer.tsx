@@ -1,35 +1,38 @@
-import { Box, Link, Text } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
-
-const links = {
-  github: 'https://github.com/ethereum-boilerplate/ethereum-boilerplate/',
-  forum: 'https://forum.moralis.io/',
-  moralis: 'https://moralis.io/?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat',
-};
+import { Typography, Space } from 'antd';
 
 const Footer = () => {
   return (
-    <Box textAlign={'center'} w="full" p={6}>
-      <Text>
-        ⭐️ Please star this{' '}
-        <Link href={links.github} isExternal alignItems={'center'}>
-          boilerplate <ExternalLinkIcon />
-        </Link>
-        , every star makes us very happy!
-      </Text>
-      <Text>
-        🙋 You have questions? Ask them on the{' '}
-        <Link href={links.forum} isExternal alignItems={'center'}>
-          Moralis forum <ExternalLinkIcon />
-        </Link>
-      </Text>
-      <Text>
-        📖 Read more about{' '}
-        <Link href={links.moralis} isExternal alignItems={'center'}>
-          Moralis <ExternalLinkIcon />
-        </Link>
-      </Text>
-    </Box>
+    <div style={{ textAlign: 'center' }}>
+      <div
+        style={{
+          display: 'block',
+          color: 'lime',
+          margin: '0',
+          padding: '0',
+        }}
+      >
+        All Rights Reserved
+      </div>
+      <h1
+        style={{
+          display: 'block',
+          color: 'lime',
+          margin: '0',
+          padding: '0',
+          fontSize: '150%',
+        }}
+      >
+        gridLock
+      </h1>
+      <div>
+        <a style={{ color: 'lime' }} href="/Home">
+          Home |
+        </a>
+        <a style={{ color: 'lime', marginLeft: '.4%' }} href="/1inch">
+          DEX
+        </a>
+      </div>
+    </div>
   );
 };
 
