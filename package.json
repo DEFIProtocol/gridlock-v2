@@ -12,6 +12,7 @@
     "deploypage": "gh-pages -d .next"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "@chakra-ui/icons": "^2.0.8",
     "@chakra-ui/react": "^2.4.3",
     "@emotion/react": "^11",
@@ -20,6 +21,7 @@
     "@web3auth/web3auth": "^2.1.3",
     "@web3uikit/core": "^0.1.5",
     "@web3uikit/icons": "^0.1.5",
+    "antd": "^5.1.0",
     "eslint-config-next": "^13.0.6",
     "ethers": "^5.6.9",
     "framer-motion": "^6",

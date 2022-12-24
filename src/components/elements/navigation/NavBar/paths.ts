@@ -6,21 +6,7 @@ const NAV_LINKS: ISubNav[] = [
   { label: 'Home', href: '/' },
   {
     label: 'DEX',
-    href: '/transfers',
-    children: [
-      {
-        label: 'ERC20',
-        subLabel: 'Get your ERC20 transfers',
-        href: '/transfers/erc20',
-        logo: 'token',
-      },
-      {
-        label: 'NFT',
-        subLabel: 'Get your ERC721 an ERC1155 transfers',
-        href: '/transfers/nft',
-        logo: 'lazyNft',
-      },
-    ],
+    href: '/dex',
   },
   {
     label: 'Account',
