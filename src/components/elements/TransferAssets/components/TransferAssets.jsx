@@ -41,7 +41,7 @@ const styles = {
   },
 };
 
-function Transfer() {
+function TransferAssets() {
   const { Moralis } = useMoralis();
   const [receiver, setReceiver] = useState();
   const [asset, setAsset] = useState();
@@ -162,4 +162,4 @@ function Transfer() {
   );
 }
 
-export default Transfer;
+export default TransferAssets;

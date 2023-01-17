@@ -1,3 +1,4 @@
+import { useColorModeValue } from '@chakra-ui/react';
 const GridlockLogo = () => {
   return (
     <>

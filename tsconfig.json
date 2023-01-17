@@ -16,6 +16,13 @@
     "incremental": true,
     "baseUrl": "./src"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/[name]/[address].jsx",
+    "pages/account.jsx",
+    "src/components/elements/TransferAssets/index.js"
+  ],
   "exclude": ["node_modules"]
 }
