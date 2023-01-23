@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { checkAllowance } from '../../pages/api/oneInch/orders';
+//import { doSwap } from '../../../../pages/api/oneInch/orders';
 
 function MarketOrder({ fromAddress, toAddress }) {
+  //const { checkAllowance } = doSwap();
   const [allowanceIsOpen, setAllowanceIsOpen] = useState();
-
-  const allowance = checkAllowance(fromAddress, toAddress, amount);
 
   return (
     <>

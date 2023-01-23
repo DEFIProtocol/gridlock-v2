@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card } from 'antd';
 import LimitOrder from './LimitOrder';
 import MarketOrder from './MarketOrder';
+import allowance from './components/allowance';
 
 const style = {
   card: {

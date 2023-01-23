@@ -25,6 +25,9 @@ const style = {
     border: '1px solid #202020',
     margin: '5px auto',
   },
+  heading: {
+    alignItems: 'center',
+  },
 };
 
 function dex() {
@@ -38,8 +41,10 @@ function dex() {
   //<Link as={`/${tokens[address].address}`} href="/[address]">
   return (
     <Default pageName="DEX">
-      <div>DEX</div>
-      <input placeholder="Search..." type="text" onChange={(e) => setQuery(e.target.value)} />
+      <div className={style.heading}>
+        <div>DEX</div>
+        <input placeholder="Search..." type="text" onChange={(e) => setQuery(e.target.value)} />
+      </div>
       {!tokens
         ? null
         : Object.keys(tokens)
