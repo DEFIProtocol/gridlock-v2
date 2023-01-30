@@ -1,9 +1,8 @@
-import React from 'react';
 import Web3 from 'web3';
 import fetch from 'node-fetch';
 
 function doSwap({ fromTokenAddress, toTokenAddress, amount }) {
-  const chainId = 56;
+  const chainId = 61;
   const web3RpcUrl = 'https://bsc-dataseed.binance.org';
   const walletAddress = '0x...xxx'; // Set your wallet address
   const privateKey = '0x...xxx'; // Set private key of your wallet. Be careful! Don't share this key to anyone!
