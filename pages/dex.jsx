@@ -58,7 +58,7 @@ function dex() {
             .map((address, index) => (
               <div key={index}>
                 <Card style={style.card}>
-                  <Link href={`/${tokens[address].name}`}>
+                  <Link href={`/${tokens[address].address}/${tokens[address].name}`}>
                     <img src={tokens[address].logoURI} style={style.img} />
                     <div style={style.name}>
                       {tokens[address].name} <br />
