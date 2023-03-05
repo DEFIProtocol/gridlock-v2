@@ -22,7 +22,9 @@
     "**/*.tsx",
     "pages/[name]/[address].jsx",
     "pages/account.jsx",
-    "src/components/elements/TransferAssets/index.js"
+    "src/components/elements/TransferAssets/index.js",
+    "pages/api/oneInch/limitOrder.js",
+    "pages/api/oneInch/limitOrder.js"
   ],
   "exclude": ["node_modules"]
 }

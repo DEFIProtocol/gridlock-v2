@@ -3,14 +3,16 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { Order } from '../../src/components/elements/PlaceOrders';
 import { useAccount } from 'wagmi';
+import { marketOrder } from '../api/oneInch';
 
 export default function name() {
   const router = useRouter();
   const { tokenAddress, name } = router.query;
   const { address, isConnected } = useAccount();
+  var walletAddress = address;
+  var amount = '100';
+  const { /*marketOrd,*/ quote } = marketOrder({ tokenAddress, walletAddress, amount });
   console.log(tokenAddress);
-  console.log(address);
-  console.log(isConnected);
 
   return (
     <>
@@ -18,7 +20,7 @@ export default function name() {
         <p>
           {name} <br />
         </p>
-        <Order />
+        <Order marketOrd={quote} quote={quote} />
       </Default>
     </>
   );

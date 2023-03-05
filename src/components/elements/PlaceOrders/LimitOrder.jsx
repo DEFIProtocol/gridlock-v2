@@ -38,7 +38,7 @@ const style = {
   },
 };
 
-function LimitOrder() {
+function LimitOrder({}) {
   const [checked, setChecked] = useState({
     ethEx: false,
     usdEx: true,

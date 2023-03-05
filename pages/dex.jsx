@@ -3,7 +3,6 @@ import { getTokenList } from './api/oneInch';
 import React, { useState, useEffect } from 'react';
 import { Card } from 'antd';
 import { Link } from '@chakra-ui/react';
-
 const style = {
   img: {
     height: '32px',
@@ -36,7 +35,7 @@ function dex() {
 
   const tokens = tokenList?.tokens;
   //Object.keys(tokenList?.tokens).map((adr) => adr.name).toLowerCase().includes(query.toLowerCase())
-  console.log(tokenList?.tokens);
+  console.log(tokens);
 
   //<Link as={`/${tokens[address].address}`} href="/[address]">
   return (
@@ -59,7 +58,7 @@ function dex() {
               <div key={index}>
                 <Card style={style.card}>
                   <Link href={`/${tokens[address].address}/${tokens[address].name}`}>
-                    <img src={tokens[address].logoURI} style={style.img} />
+                    <img src={tokens[address].logoURI} alt="No Logo" style={style.img} />
                     <div style={style.name}>
                       {tokens[address].name} <br />
                       {tokens[address].symbol}

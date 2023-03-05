@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Card } from 'antd';
 import LimitOrder from './LimitOrder';
 import MarketOrder from './MarketOrder';
-import allowance from './components/allowance';
 
 const style = {
   card: {
@@ -27,9 +26,9 @@ const style = {
   },
 };
 
-function Order() {
-  const [orderType, setOrderType] = useState('limit');
-  const [userAddress, setUserAddress] = useState();
+function Order({ marketOrd, quote }) {
+  const [orderType, setOrderType] = useState('market');
+  console.log(quote);
 
   return (
     <>
@@ -42,11 +41,7 @@ function Order() {
             Market Order
           </span>
         </div>
-        {orderType == 'limit' ? (
-          <LimitOrder walletAddress={userAddress} />
-        ) : (
-          <MarketOrder walletAddress={userAddress} />
-        )}
+        {orderType == 'limit' ? <LimitOrder /> : <MarketOrder quote={quote} />}
       </Card>
     </>
   );

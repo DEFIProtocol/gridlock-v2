@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-//import { doSwap } from '../../../../pages/api/oneInch/orders';
 
 const style = {
   checkbox: {
@@ -39,9 +38,7 @@ const style = {
   },
 };
 
-function MarketOrder({ fromAddress, toAddress }) {
-  //const { checkAllowance } = doSwap();
-  const [allowanceIsOpen, setAllowanceIsOpen] = useState();
+function MarketOrder({ quote }) {
   const [checked, setChecked] = useState({
     ethEx: false,
     usdEx: true,
@@ -60,6 +57,8 @@ function MarketOrder({ fromAddress, toAddress }) {
       });
     }
   };
+
+  console.log(quote());
 
   return (
     <>
@@ -88,12 +87,12 @@ function MarketOrder({ fromAddress, toAddress }) {
           Order Priced in ETH
         </label>
       </div>
-      <input type="text" placeholder="Amount" style={style.input} />
+      <input type="text" placeholder="Amount" style={style.input} onChange={(e) => setAmount(e)} />
       <div style={style.buttonContainer}>
-        <button style={style.buyButton} type="button" placeholder="Buy">
+        <button style={style.buyButton} type="button" placeholder="Buy" onClick={() => quote}>
           Buy
         </button>
-        <button style={style.sellButton} type="button" placeholder="Sell">
+        <button style={style.sellButton} type="button" placeholder="Sell" onClick={() => quote}>
           Sell
         </button>
       </div>
